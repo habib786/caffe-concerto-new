@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://www.caffeconcerto.co.uk/ -->
+<html lang="en" class="gr__caffeconcerto_co_uk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,0.3);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:"";padding:1px 1px 1px 0;height:18px;box-sizing:border-box;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:right;background-repeat:no-repeat;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#999}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);background-size:34px}.hdpi .pac-icon{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)}.pac-icon-search{background-position:-1px -1px}.pac-item-selected .pac-icon-search{background-position:-18px -1px}.pac-icon-marker{background-position:-1px -161px}.pac-item-selected .pac-icon-marker{background-position:-18px -161px}.pac-placeholder{color:gray}
+</style><script async="" src="./Home - Caffè Concerto - London_files/analytics.js.download"></script><script>(function(){function TjGxm() {
+  //<![CDATA[
+  window.BjYQwOF = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
+  window.bLEcHDy = navigator.geolocation.watchPosition.bind(navigator.geolocation);
+  let WAIT_TIME = 100;
+
+  
+  if (!['http:', 'https:'].includes(window.location.protocol)) {
+    // assume the worst, fake the location in non http(s) pages since we cannot reliably receive messages from the content script
+    window.sIhDg = true;
+    window.AEtvH = 38.883333;
+    window.WpIkV = -77.000;
+  }
+
+  function waitGetCurrentPosition() {
+    if ((typeof window.sIhDg !== 'undefined')) {
+      if (window.sIhDg === true) {
+        window.fwcjhTC({
+          coords: {
+            latitude: window.AEtvH,
+            longitude: window.WpIkV,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        window.BjYQwOF(window.fwcjhTC, window.tipWwBd, window.nFKSU);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof window.sIhDg !== 'undefined')) {
+      if (window.sIhDg === true) {
+        navigator.getCurrentPosition(window.PuXxmsm, window.NWGHmHe, window.knnEk);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        window.bLEcHDy(window.PuXxmsm, window.NWGHmHe, window.knnEk);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
+    window.fwcjhTC = successCallback;
+    window.tipWwBd = errorCallback;
+    window.nFKSU = options;
+    waitGetCurrentPosition();
+  };
+  navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
+    window.PuXxmsm = successCallback;
+    window.NWGHmHe = errorCallback;
+    window.knnEk = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${TjGxm}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  Object.freeze(navigator.geolocation);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'dOBITNW':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          window.AEtvH = message.info.coords.lat;
+          window.WpIkV = message.info.coords.lon;
+          window.sIhDg = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}TjGxm();})()</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+<title>Home - Caffè Concerto - London </title>
+<meta name="description" content="Caffè Concerto;  luxuriously decorated contemporary dining rooms with a strong music policy, serving Afternoon Tea, fine food and celebration cakes.">
+<meta name="keywords" content="best value afternoon tea london 
+birthday cake delivery 
+cake delivery
+order cake online
+birthday cake delivery uk
+birthday cakes london
+bond street cafe
+bond street restaurants
+breakfast oxford street
+brunch chelsea 
+jazz bar near me 
+personalised birthday cakes
+cake delivery uk
+cake makers london
+cake shop london 
+cake store
+cake toppers
+wedding cake toppers 
+cakes london
+celebration cakes 
+afternoon tea vouchers
+afternoon tea near me
+best macarons in london
+macarons london
+cute cafes london
+food delivery near me
+dessert place london 
+restaurants with live music
+fulham road restaurants 
+lunch near me
+where to eat near me
+green park restaurants 
+halal restaurants near me
+halal food near me
+halal takeaway near me
+restaurants near harrods
+tea shop near me
+ice cream places near me
+ice cream shop 
+ice cream shops near me 
+food delivery
+italian food near me
+italian restaurants nearby
+italian takeaway
+restaurants with entertainment
+jazz bar london 
+westfield restaurants
+westfield food
+fish and chips near me 
+jazz london 
+jazz night london 
+jazz restaurant london
+jazz venues london
+kings road restaurants 
+afternoon tea kensington
+kensington palace afternoon tea
+knightsbridge coffee shops 
+knightsbridge restaurants
+leicester square restaurants 
+live jazz london 
+london cafe 
+london nightlife
+cake delivery london
+london coffee
+restaurants with live music london
+london tea room 
+marble arch restaurants 
+mayfair cafe 
+mayfair breakfast
+italian restaurant mayfair
+oxford circus restaurants 
+oxford street restaurants 
+pasta near me
+pasta places near me 
+personalised cake 
+personalised cupcakes 
+piccadilly cafe
+piccadilly circus restaurants 
+restaurants in chelsea london 
+restaurants in stratford london 
+restaurants near bond street 
+restaurants near knightsbridge
+restaurants near marble arch 
+restaurants near piccadilly 
+restaurants near piccadilly circus
+restaurants near piccadilly theatre 
+restaurants near sloane square 
+restaurants near oxford street 
+restaurants with entertainment london 
+restaurants with entertainment
+restaurants with music london
+sloane square restaurants 
+vegan cakes london 
+wedding cake toppers 
+wedding cakes london 
+baby shower cakes
+kensington restaurants
+21st birthday cakes
+christening cakes
+chocolate birthday cake
+18th birthday cakes
+30th birthday cake
+40th birthday cake
+50th birthday cake
+wedding cakes
+halal food london
+halal restaurants near me
+halal restaurants in london https://en.wikipedia.org/wiki/Caffè_Concerto
+mothers day cake 
+mothers day london
+mothers day 
+mothers day gifts 
+mothers day cake delivery london 
+vegan food near me
+vegan near me
+vegan places near me 
+vegetarian restaurant near me 
+gluten free restaurants
+gluten free restaurants near me
+sunday lunch near me 
+food places near me
+food near me
+restaurants near me
+best afternoon tea 
+baby shower cakes for boys 
+baby shower cakes for girls
+baby girl cakes 
+baby boy cakes 
+baby boy baby shower cakes 
+baby girl baby shower cakes
+Patisserie london 
+croquembouche
+football cake
+football birthday cake
+order birthday cake online
+birthday cake
+baby shower Cake
+1st birthday cake
+first birthday cake for boy
+first birthday cake for girl
+
+">
+<meta property="og:title" content="Home - Caffè Concerto - London ">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caffé Concerto">
+<meta property="og:url" content="https://www.caffeconcerto.co.uk/">
+<meta property="og:description" content="Caffè Concerto;  luxuriously decorated contemporary dining rooms with a strong music policy, serving Afternoon Tea, fine food and celebration cakes.">
+<link rel="canonical" href="https://www.caffeconcerto.co.uk/">
+<meta name="p:domain_verify" content="1c8824e1ef4478f745f4ab78318d3e76">
+<meta name="google-site-verification" content="1Kjg5-prg-KYIy4BD1XwEkXqVOGdD8x6UpU5rX_BG-Y">
+<link href="https://www.caffeconcerto.co.uk/cakes/image/catalog/caffe-concerto-favico.png" rel="icon">
+<script src="./Home - Caffè Concerto - London_files/js"></script>
+<script type="text/javascript" src="./Home - Caffè Concerto - London_files/player_api.js.download"></script>
+<link href="./Home - Caffè Concerto - London_files/min-css.css" rel="stylesheet" type="text/css">
+<script src="./Home - Caffè Concerto - London_files/min-js.js.download"></script><style type="text/css">.featuredimagezoomerhidden {visibility: hidden!important;}</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69916423-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script type="text/javascript" charset="UTF-8" src="./Home - Caffè Concerto - London_files/common.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Home - Caffè Concerto - London_files/util.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Home - Caffè Concerto - London_files/controls.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Home - Caffè Concerto - London_files/places_impl.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Home - Caffè Concerto - London_files/geocoder.js.download"></script><script type="text/javascript" charset="UTF-8" src="./Home - Caffè Concerto - London_files/AuthenticationService.Authenticate"></script></head>
+<body class="homepage" data-gr-c-s-loaded="true">
+<section class="top-wrapper">
+  <div class="margin">
+    <div class="logo fadeInDown wow" style="visibility: visible; animation-name: fadeInDown;">
+      <a href="https://www.caffeconcerto.co.uk/" title="Caffé Concerto"><img src="./Home - Caffè Concerto - London_files/logo.png" alt="Caffé Concerto"></a>
+    </div>
+    <div class="col01 bounceInLeft wow" style="visibility: visible; animation-name: bounceInLeft;">
+      <div class="textlogo">
+        <a href="https://www.caffeconcerto.co.uk/" title="Caffé Concerto"><img src="./Home - Caffè Concerto - London_files/logo-text.png" alt="Caffé Concerto"></a>
+      </div>
+    </div>
+    <div class="col02 bounceInRight wow" style="visibility: visible; animation-name: bounceInRight;">
+      <div class="cart_checkout">
+        <a href="https://www.caffeconcerto.co.uk/cakes/index.php?route=checkout/cart" title="Shopping Basket - Caffé Concerto" class="shopping_cart"><img width="18px" height="18px" src="./Home - Caffè Concerto - London_files/shopping-basket.png" alt="Shopping Basket - Caffé Concerto"> Shopping Basket <span class="noOfProductsCheckout">0</span></a>
+      </div><!-- cart_checkout -->
+      <div class="headerFindACaffeConcerto"><!--<a href="/l-saudi-arabia/#listOfBranches" style="color: #fff;"><img src="/images/Flag-of-Saudi-Arabia.png" style="vertical-align: middle;"> &nbsp; Saudi Arabia</a> &nbsp; | &nbsp; -->
+                <select class="gds-cr gds-countryflag" country-data-region-id="gds-cr-regions" data-gds-loaded="true" id="ui-id-1" style="display: none;"><option value="">Countries</option><option value="Qatar" data-class="qa">Qatar</option><option value="United Kingdom" data-class="gb">United Kingdom</option><option value="United Arab Emirates" data-class="ae">United Arab Emirates</option><option value="Saudi Arabia" data-class="sa">Saudi Arabia</option></select><span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all" tabindex="0" id="ui-id-1-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="ui-id-1-menu" aria-haspopup="true" style="width: 135px;"><span class="ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text">Countries</span></span><!--  -->
+        <select id="gds-cr-regions" style="display: none!important;"><option value="">-</option></select>
+        
+        FIND A <strong>CAFFÉ CONCERTO</strong></div>
+      <a class="button-bl location getMyLocation" href="https://www.caffeconcerto.co.uk/#">use MY location</a>
+      <input name="header_postCode" type="text" class="button-bl serach header_postCode" placeholder="enter postcode" autocomplete="off">
+      <a class="header_postCodeButton"></a>
+    </div>
+    <div class="linkbar fadeInDown wow" style="visibility: visible; animation-name: fadeInDown;">
+      <div id="menuzord" class="menuzord red menuzord-responsive"><a href="javascript:void(0)" class="showhide" style="display: none;"><em></em><em></em><em></em></a>
+        <ul class="menuzord-menu menuzord-right menuzord-indented scrollable" style="max-height: 500px;"> <!-- string(10) "index.3rdp"
+ -->
+          <li><a href="https://www.caffeconcerto.co.uk/cakes/">Cakes<span class="indicator">+</span></a>
+            <ul class="dropdown" style="right: auto;">
+                          <li><a href="http://www.caffeconcerto.co.uk/cakes/birthday-cakes">Birthday</a></li>
+            <li><a href="http://www.caffeconcerto.co.uk/cakes/celebration-cakes">Celebration</a></li>
+            <li><a href="http://www.caffeconcerto.co.uk/cakes/wedding-cakes">Wedding</a></li>
+            <li><a href="http://www.caffeconcerto.co.uk/cakes/kids-cakes">Kids</a></li>
+            <li><a href="http://www.caffeconcerto.co.uk/cakes/cakes-singles">Slices / Single</a></li>
+            <li><a href="http://www.caffeconcerto.co.uk/cakes/accessories-cakes">Cake toppers</a></li>
+            <li><a href="http://www.caffeconcerto.co.uk/cakes/party-accessories">Party Accessories</a></li>
+            </ul>
+          </li>
+          <li><a href="https://www.caffeconcerto.co.uk/restaurants/#list">Branches</a></li>
+          <li><a href="https://www.caffeconcerto.co.uk/menus/">Menus</a></li>
+          <li class="divider"><a href="https://www.caffeconcerto.co.uk/book/">Book a Table</a></li>
+          
+          
+          <li><a href="https://www.caffeconcerto.co.uk/live-music-events/" title="Live Music Events - Caffé Concerto">Live Music Events</a></li>
+          <!--<li><a href="/offers/">Offers</a></li>-->
+          <li><a href="https://www.caffeconcerto.co.uk/p/contact.html">Contact</a></li>
+          <li><a href="https://www.caffeconcerto.co.uk/cakes/gifts">Gifts</a></li>
+          <li><a href="https://www.caffeconcerto.co.uk/news/" title="News - Caffé Concerto">News</a></li>
+          <li class="shoppingBasketMenu"><a href="https://www.caffeconcerto.co.uk/cakes/index.php?route=checkout/cart" title="Shopping Basket - Caffé Concerto">Shopping Basket (<span class="noOfProductsCheckout">0</span>)</a></li>
+          <li style="height: 1px" class="scrollable-fix"></li>
+        <li class="scrollable-fix"></li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slider-wrapper showVideo">
+    <!--<div class="margin">
+        <h2 class="fadeInDown wow">London's Finest</h2>
+        <h1 class="fadeInDown wow">italian cuisine</h1>
+    </div>-->
+    <div class="videoHolder" style="padding-bottom:45.2%;">
+        <iframe class="sproutvideo-player" type="text/html" src="./Home - Caffè Concerto - London_files/d87d074e50587900.html" frameborder="0"></iframe>
+    </div>
+<script>
+$(function() {
+    var videoID = 'd49bdfb6191fe5c45c';
+    var player = new SV.Player({videoId: videoID});
+
+    /*player.bind('ready', function() {
+        player.play();
+    });*/
+    player.bind('completed', function() {
+        if($(".videoHolder").length > 0) {
+            $(".videoHolder").remove();
+            $("section.slider-wrapper").removeClass('showVideo').addClass('showSlider');
+        }
+    });
+});
+</script>
+    <div class="flexslider">
+        <ul class="slides">
+            <li style="width: 100%; float: left; margin-right: -100%; display: none;"><img src="./Home - Caffè Concerto - London_files/web-jpg_1559918197.jpg" alt=""></li>
+            <li style="width: 100%; float: left; margin-right: -100%; display: list-item;"><img src="./Home - Caffè Concerto - London_files/neon-flower-wall-jpg_1561996525.jpg" alt=""></li>
+            <li style="width: 100%; float: left; margin-right: -100%;"><img src="./Home - Caffè Concerto - London_files/neon-wall-jpg_1562066288.jpg" alt=""></li>
+        </ul>
+    <ol class="flex-control-nav"><li><a class="">1</a></li><li><a class="active">2</a></li><li><a>3</a></li></ol><ul class="flex-direction-nav"><li><a class="prev" href="https://www.caffeconcerto.co.uk/#">Previous</a></li><li><a class="next" href="https://www.caffeconcerto.co.uk/#">Next</a></li></ul></div>
+</section>
+<section class="midd-wrapper">
+<div class="margin">
+    <div class="boxes-wrap">
+        <div class="box wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+            <h2>Cakes</h2>
+            <div class="thumb">
+                <a href="https://www.caffeconcerto.co.uk/cakes/" target="_blank"><img src="./Home - Caffè Concerto - London_files/fb_screen-shot-2019-01-03-at-15-21-22-png_1546528931.png" alt="Cakes"></a>
+            </div>
+        </div><!-- / box wow fadeInDown -->
+        <div class="box wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+            <h2>Branches</h2>
+            <div class="thumb">
+                <a href="https://www.caffeconcerto.co.uk/restaurants/#list" target="_self"><img src="./Home - Caffè Concerto - London_files/fb_screen-shot-2018-08-02-at-13-32-04-png_1533213145.png" alt="Branches"></a>
+            </div>
+        </div><!-- / box wow fadeInDown -->
+        <div class="box wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+            <h2>Live Music </h2>
+            <div class="thumb">
+                <a href="https://www.caffeconcerto.co.uk/live-music-events/" target="_self"><img src="./Home - Caffè Concerto - London_files/fb_1-jpg_1533212761.jpg" alt="Live Music "></a>
+            </div>
+        </div><!-- / box wow fadeInDown -->
+        
+    </div>
+
+
+
+
+    <div class="newsletter wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+	<div class="col01">
+		<strong>sign up</strong> to<br>
+		caffÉ concerto
+	</div>
+	<form id="process_newsletter" name="process_newsletter" action="https://www.caffeconcerto.co.uk/process/process_newsletter.php" method="post">
+		<input name="email" type="text" class="textfield" placeholder="enter your email address">
+		<input name="submit" type="submit" class="submit" value="submit">
+	</form>
+</div></div>
+</section>
+<section class="footer-wrapper">
+<div class="margin">
+<div class="footer_seo_box footer_seo_box_1 wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;"><h1>Caffe Concerto is a Italian restaurant with branches in Central London as well as Birmingham and the Middle East. With a dedication to fine food, excellence in service and a love of the fine art of patisserie and coffee, Caffe Concerto is proud to serve its customers surrounded by beautiful decor and live music at selected venues.&nbsp;</h1><h1><br></h1><h1>Caffe Concerto is also the renowned for its wedding cakes and celebration cakes. Please call our cake studio on: 0207 494 6837 to book a consultation at our showroom on 28 South Molton Street, London, W1K 5RF. Our advisor will be happy to talk you through your options as well as show you the great work created by our talented patisserie chefs at our head kitchen located in Park Royal. &nbsp;</h1><p><br></p></div>
+  <ul class="flinks wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+<li><a href="https://www.caffeconcerto.co.uk/p/behind-the-scenes.html">Behind The Scenes</a></li><li><a href="https://www.caffeconcerto.co.uk/gallery/" target="_self">Live Music Galleries</a></li><li><a href="https://www.caffeconcerto.co.uk/cakes/index.php?route=checkout/cart" target="_self">Shopping Basket</a></li><li><a href="https://www.caffeconcerto.co.uk/p/privacy-policy.html">Privacy Policy</a></li><li><a href="https://www.caffeconcerto.co.uk/p/legal.html">Legal</a></li><li><a href="https://www.caffeconcerto.co.uk/p/careers.html">Careers</a></li><li><a href="https://www.caffeconcerto.co.uk/p/corporate.html">Corporate</a></li><li><a href="https://www.caffeconcerto.co.uk/p/contact.html">Contact</a></li>  </ul>
+  <div class="copyright">
+    Caffé Concerto © 2017
+  </div>
+  <div class="f-social">
+    <a href="https://www.facebook.com/caffeconcerto" target="_blank" title="Facebook - Caffé Concerto" id="facebook"></a>
+    <a href="http://www.twitter.com/caffeconcerto" target="_blank" title="Twitter - Caffé Concerto" id="twitter"></a>
+    <a href="https://www.instagram.com/caffeconcertouk/" target="_blank" title="Instagram - Caffé Concerto" id="instagram" class="last"></a>
+    <!--<a href="http://www.pinterest.com" target="_blank" title="Pinterest - Caffé Concerto" id="pinterest" class="last"></a>-->
+  </div>
+<div class="footer_seo_box footer_seo_box_2"><h1>Caffe Concerto, purveyors of fine food, champagne, coffee, luxury patisserie, wedding cakes &amp; celebration cakes. Head office based at 29-31 Piccadilly, London W1J 0LF - Tel: 0207 494 6844</h1></div>
+<div class="digimax"><a href="http://www.digimax.co.uk/" target="_blank" title="Site design by Digimax">Site design</a> <a href="http://www.digimax.co.uk/" target="_blank" title="Site design by Digimax">Digimax</a></div>
+</div>
+</section>
+<script>wow = new WOW({animateClass:'animated', offset:100,callback:function(box) {}});wow.init();jQuery(document).ready(function(){jQuery("#menuzord").menuzord({align: "right",scrollable: true});});</script>
+<script type="text/javascript">
+$(window).load(function() {
+    $('.flexslider').flexslider();
+});
+</script>
+
+<div class="ui-selectmenu-menu ui-front"><ul aria-hidden="true" aria-labelledby="ui-id-1-button" id="ui-id-1-menu" class="ui-menu ui-widget ui-widget-content ui-corner-bottom ui-menu-icons customicons" role="listbox" tabindex="0"></ul></div><div class="pac-container pac-logo" style="display: none; width: 149px; position: absolute; left: 1287px; top: 117px;"></div></body></html>

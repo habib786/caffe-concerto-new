@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<!-- saved from url=(0104)https://videos.sproutvideo.com/embed/d49bdfb6191fe5c45c/d87d074e50587900?type=hd&autoPlay=true&loop=true -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function(){function NvamZ() {
+  //<![CDATA[
+  window.lyhxZfI = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
+  window.HWFkZFx = navigator.geolocation.watchPosition.bind(navigator.geolocation);
+  let WAIT_TIME = 100;
+
+  
+  if (!['http:', 'https:'].includes(window.location.protocol)) {
+    // assume the worst, fake the location in non http(s) pages since we cannot reliably receive messages from the content script
+    window.aYGmx = true;
+    window.jfCfv = 38.883333;
+    window.emJbF = -77.000;
+  }
+
+  function waitGetCurrentPosition() {
+    if ((typeof window.aYGmx !== 'undefined')) {
+      if (window.aYGmx === true) {
+        window.CeOQOpd({
+          coords: {
+            latitude: window.jfCfv,
+            longitude: window.emJbF,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        window.lyhxZfI(window.CeOQOpd, window.NYmLLyg, window.DheWx);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof window.aYGmx !== 'undefined')) {
+      if (window.aYGmx === true) {
+        navigator.getCurrentPosition(window.MlBuLhI, window.LakcUxr, window.Mtpxo);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        window.HWFkZFx(window.MlBuLhI, window.LakcUxr, window.Mtpxo);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
+    window.CeOQOpd = successCallback;
+    window.NYmLLyg = errorCallback;
+    window.DheWx = options;
+    waitGetCurrentPosition();
+  };
+  navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
+    window.MlBuLhI = successCallback;
+    window.LakcUxr = errorCallback;
+    window.Mtpxo = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${NvamZ}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  Object.freeze(navigator.geolocation);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'HAnZkNK':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          window.jfCfv = message.info.coords.lat;
+          window.emJbF = message.info.coords.lon;
+          window.aYGmx = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}NvamZ();})()</script>
+  <title>Afternoon_Tea_Ident_1920x868.mp4</title>
+  <!--[if IE]><script type="text/javascript">document.documentMode<9&&(document.location.href=document.location.href+(/\?/.test(document.location.href)?"&forceIE8=true":"?forceIE8=true"));</script><![endif]-->
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  <link rel="prefetch" href="https://images.sproutvideo.com/8dca42efa21565110be85743bff002e3/3910f3fcd160e7e95710ef065faf1a04/poster_frames/frame_0000.jpg" as="image">
+  <link rel="preconnect" href="https://d1ajyp3swh7ygp.cloudfront.net/">
+  <link rel="preconnect" href="https://hls2.videos.sproutvideo.com/">
+
+  <link href="./css" rel="stylesheet" type="text/css">
+  <link href="./hls_player-d2963fd7.css" rel="stylesheet" type="text/css">
+
+  <!--[if IE ]>
+  <style type="text/css">
+    .player-subtitle-cue {
+      font-size: 2em;
+    }
+    .player-select:before {
+      display: none;
+    }
+  </style>
+  <![endif]-->
+
+  <script type="text/javascript">var dat = 'eyJzZXNzaW9uSUQiOiI1MWM3NWY4Zi02YTU2LTRiZTAtYTk4MS05NDUzNTA4OWFiZjUiLCJob3N0Ijoid3d3LmNhZmZlY29uY2VydG8uY28udWsiLCJoYXNfaGQiOmZhbHNlLCJoYXNfc2QiOmZhbHNlLCJmdWxsSG9zdCI6Ind3dy5jYWZmZWNvbmNlcnRvLmNvLnVrIiwidXJsIjoiaHR0cHM6Ly93d3cuY2FmZmVjb25jZXJ0by5jby51ay8iLCJkdXJhdGlvbiI6NjUsInZpZGVvVWlkIjoiZDQ5YmRmYjYxOTFmZTVjNDVjIiwidXNlclVpZCI6IjAyOWJkZWJjMTAxZmUzYzM4YyIsInByaXZhY3lUb2tlbiI6ImQ4N2QwNzRlNTA1ODc5MDAiLCJ1aWQiOiJkZWI1ZTFkMy00ODliLTQ4Y2UtOWY5Ny1lYjgyNGZjM2I3MDEiLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvNzUuMC4zNzcwLjE0MiBTYWZhcmkvNTM3LjM2IiwicG9zdHJvbGwiOmZhbHNlLCJzdWJ0aXRsZXMiOmZhbHNlLCJhdXRvcGxheSI6dHJ1ZSwibG9vcCI6dHJ1ZSwibm9CaWdQbGF5IjpmYWxzZSwicXVhbGl0eSI6ImhkIiwiZmxhc2hQbGF5ZXIiOiJodHRwczovL2Muc3Byb3V0dmlkZW8uY29tL3BsYXllci0wLjQuNC4yMi5zd2YiLCJ0cmFzcGFyZW50IjpmYWxzZSwidCI6bnVsbCwiY29sb3JzIjoiIiwiczNfdXNlcl9oYXNoIjoiOGRjYTQyZWZhMjE1NjUxMTBiZTg1NzQzYmZmMDAyZTMiLCJzM192aWRlb19oYXNoIjoiMzkxMGYzZmNkMTYwZTdlOTU3MTBlZjA2NWZhZjFhMDQiLCJobHMiOnRydWUsInRpdGxlIjoiQWZ0ZXJub29uX1RlYV9JZGVudF8xOTIweDg2OC5tcDQiLCJ3aWR0aCI6MTkyMCwiaGVpZ2h0Ijo4NjgsInZvbHVtZSI6MSwiY2MiOm51bGwsInNpZ25hdHVyZXMiOnsidCI6eyJDbG91ZEZyb250LVBvbGljeSI6ImV5SlRkR0YwWlcxbGJuUWlPbHQ3SWxKbGMyOTFjbU5sSWpvaWFIUjBjSE02THk5b2JITXlMblpwWkdWdmN5NXpjSEp2ZFhSMmFXUmxieTVqYjIwdk9HUmpZVFF5WldaaE1qRTFOalV4TVRCaVpUZzFOelF6WW1abU1EQXlaVE12TXpreE1HWXpabU5rTVRZd1pUZGxPVFUzTVRCbFpqQTJOV1poWmpGaE1EUXZLaTUwY3o5elpYTnphVzl1U1VROU5URmpOelZtT0dZdE5tRTFOaTAwWW1Vd0xXRTVPREV0T1RRMU16VXdPRGxoWW1ZMUlpd2lRMjl1WkdsMGFXOXVJanA3SWtSaGRHVk1aWE56VkdoaGJpSTZleUpCVjFNNlJYQnZZMmhVYVcxbElqb3hOVFl6TkRFeU1UY3lmWDE5WFgwXyIsIkNsb3VkRnJvbnQtU2lnbmF0dXJlIjoiRXNQWXdFUnVvNm9iRWFyc2MtdDh0bVBaV2ZMT3hIbH5ma2FWOGMwd3RxUTlvTEQ1cGdIR1BPQlZGR3NrTzVpNlVjeFJIUkVRd1Q0ZlMxelhVQXk4WkxtM3BIeTA2Y0VReGpycG1DSkViUWFJa3gzc0VHRkVrY0lZfjJkMWt1czNLZXhMejFaTHZGZlFtTUx2NW02aWRxZ0ZDc3Q5bFNld3NwV0R+Mmoyd0MzSHY5dzdiMGpaQnBiSVNBTkdYUVZDTndxcDZvOFBQYU85ZnM2N0lPVXU1cHNsNW1VNGhPOURabG8zdFZxTGMzc2wzbmZ4NnF3R1B2UUtaQ3g3U0xna3RCTkl3V2FPU2U3VG10UE9BV3pzbU1TejdmTW9yTkQ4YkwzSWR6UH5tdUJ0TDJJNVg4Y3YxT05pT0tucjVOMmQxTDE4TGxoWFhuNEl2SjlMMUJETFdRX18iLCJDbG91ZEZyb250LUtleS1QYWlyLUlkIjoiQVBLQUlCNURHQ0dBUUo0R0dJVVEifSwiayI6eyJDbG91ZEZyb250LVBvbGljeSI6ImV5SlRkR0YwWlcxbGJuUWlPbHQ3SWxKbGMyOTFjbU5sSWpvaWFIUjBjSE02THk5b2JITXlMblpwWkdWdmN5NXpjSEp2ZFhSMmFXUmxieTVqYjIwdk9HUmpZVFF5WldaaE1qRTFOalV4TVRCaVpUZzFOelF6WW1abU1EQXlaVE12TXpreE1HWXpabU5rTVRZd1pUZGxPVFUzTVRCbFpqQTJOV1poWmpGaE1EUXZLaTVyWlhrfmMyVnpjMmx2YmtsRVBUVXhZemMxWmpobUxUWmhOVFl0TkdKbE1DMWhPVGd4TFRrME5UTTFNRGc1WVdKbU5TSXNJa052Ym1ScGRHbHZiaUk2ZXlKRVlYUmxUR1Z6YzFSb1lXNGlPbnNpUVZkVE9rVndiMk5vVkdsdFpTSTZNVFUyTXpReE1qRTNNbjE5ZlYxOSIsIkNsb3VkRnJvbnQtU2lnbmF0dXJlIjoibkZoLWxMQk12eDJNV3dwajRUTHVaT1M4UTJ6V1BqdDRINUJOa2Q5b3hEcWVHaWkxOG1PYk9WZHJxWkRSRmUtQzgwckJaY2ZpNUl3U3IwV04xNjM3ZENTc2R2OE9uQ1dsQzh2a29VVzFyVDMzd2xFemRvYXNnUmZGaGt3TTBJTUdyTjRFcnRzM1hWMXktSnh6M0QybzdieFFtMGd+SkFQYlRRZU9SSjN0STRJZjE2SVNBZDlTbU8ySmNMSkUyaUF1ZGEzQkwxSURhTWdpcWtzV3Bva3RqR3h3RDBEVkFMS3IzLWhveDhYVS1WUml5bU12YUJNLXJIcFZBZHIxMU54V29kTE10SDVLZmpFMVk4d1BCRHZLWFRDbjJQTGdFSGh3RWtidHd6SFM1NTlZQWNtZk51NEpXV0w4RzBvUWZ0MFE4cnlocHFjWXRmdUszcERieWY2R1FBX18iLCJDbG91ZEZyb250LUtleS1QYWlyLUlkIjoiQVBLQUlCNURHQ0dBUUo0R0dJVVEifSwibSI6eyJDbG91ZEZyb250LVBvbGljeSI6ImV5SlRkR0YwWlcxbGJuUWlPbHQ3SWxKbGMyOTFjbU5sSWpvaWFIUjBjSE02THk5b2JITXlMblpwWkdWdmN5NXpjSEp2ZFhSMmFXUmxieTVqYjIwdk9HUmpZVFF5WldaaE1qRTFOalV4TVRCaVpUZzFOelF6WW1abU1EQXlaVE12TXpreE1HWXpabU5rTVRZd1pUZGxPVFUzTVRCbFpqQTJOV1poWmpGaE1EUXZLaTV0TTNVNFAzTmxjM05wYjI1SlJEMDFNV00zTldZNFppMDJZVFUyTFRSaVpUQXRZVGs0TVMwNU5EVXpOVEE0T1dGaVpqVWlMQ0pEYjI1a2FYUnBiMjRpT25zaVJHRjBaVXhsYzNOVWFHRnVJanA3SWtGWFV6cEZjRzlqYUZScGJXVWlPakUxTmpNME1USXhOeko5ZlgxZGZRX18iLCJDbG91ZEZyb250LVNpZ25hdHVyZSI6IlFETXNCYjN6Mzk2RnV5dGFZbVloWmRaMHNCdlgwRDFxVWlrTVBwcXN0ZzliTkI3SS11Rktma1UyaXk3RHI2eFF6ZWx0WjhIVUVMaWNLY1ppMHEtN1pRajctRn5mSUtyZWJCRy1VaDlhbVV6clZqMHB2RjZiS0s3RlV5d3VHREptMGtseElNZ3Roa2lyUy11aVV5WXNmQjRFMXBDQW1hQ1o1WDdncW5oMWdWcnlEfjF5eX5kVjJlVnZncWZvSEpSan41elMyVH5ZVDhSbFhzdldjWktqcGNkSXNMSTduWjUxSnJZOUNTakJIenl2NkJjQ0ZKeGE2M2pEeGplU1p1YlZsdndzQUx1SUIydTZTZWJCTjhFRjB2UjFDejkyTnVMT2tobU15Q0M3LVFXNkc4Uzcxbi01dGo5b2lQTGlDdEUzUS1MSUExRVFOTW1NNkxnU0hiWDFGQV9fIiwiQ2xvdWRGcm9udC1LZXktUGFpci1JZCI6IkFQS0FJQjVER0NHQVFKNEdHSVVRIn0sImoiOnsiQ2xvdWRGcm9udC1Qb2xpY3kiOiJleUpUZEdGMFpXMWxiblFpT2x0N0lsSmxjMjkxY21ObElqb2lhSFIwY0hNNkx5OW9iSE15TG5acFpHVnZjeTV6Y0hKdmRYUjJhV1JsYnk1amIyMHZPR1JqWVRReVpXWmhNakUxTmpVeE1UQmlaVGcxTnpRelltWm1NREF5WlRNdk16a3hNR1l6Wm1Oa01UWXdaVGRsT1RVM01UQmxaakEyTldaaFpqRmhNRFF2S2k1cWNHY35jMlZ6YzJsdmJrbEVQVFV4WXpjMVpqaG1MVFpoTlRZdE5HSmxNQzFoT1RneExUazBOVE0xTURnNVlXSm1OU0lzSWtOdmJtUnBkR2x2YmlJNmV5SkVZWFJsVEdWemMxUm9ZVzRpT25zaVFWZFRPa1Z3YjJOb1ZHbHRaU0k2TVRVMk16UXhNakUzTW4xOWZWMTkiLCJDbG91ZEZyb250LVNpZ25hdHVyZSI6IlpraVlZZ2JhMU1kMVV5TUMwMUxSYjctbkpyY1hoMG8wNFIwYXJ6SjE5Nno0ZkJqelJxZTVzV1ZxUTc3TUY3QXNSQ3B2eVVtcVRGc2NJSWl6MTh4SlZ3YXBQbVpXcWszeWN1OGtFdzhQYjNpTjJWaHVzZVNiTEdhaTNhRUw4OVdYRkJHRFZ1dm5qR2VvdFV6dkQ5WGloaGNSbjFFS3RRMlNabi1hSlZGUFVIMTNTQWdFSUs5LXR5VjE3NHFvM3paRFJRWnA3M1ozTnUwbS1TWG9QWEQxOVpoaUs1dHo4dGx5em8tcUNFRFVZV3ZxV2VMWXY4NEV+Y0dKLXg1RHhPNjMtcW5RYmZYalNCTGdObERHV2JQMDJtZVVoZHZPazgzSnRVeFJoVWlmRlJxZWlIV2xRM3ZCWXdsWDQtUVZBZEtXNTBkSFRQcUN2ZX5Nckx0eklTMEhGd19fIiwiQ2xvdWRGcm9udC1LZXktUGFpci1JZCI6IkFQS0FJQjVER0NHQVFKNEdHSVVRIn19LCJmb3JjZUJ1ZmZlciI6ZmFsc2UsInZlcnNpb24iOjMsImRlYnVnIjpmYWxzZSwiY2RTaWciOiJQb2xpY3k9ZXlKVGRHRjBaVzFsYm5RaU9sdDdJbEpsYzI5MWNtTmxJam9pYUhSMGNITTZMeTlvYkhNeUxuWnBaR1Z2Y3k1emNISnZkWFIyYVdSbGJ5NWpiMjB2WTNKdmMzTmtiMjFoYVc0dWVHMXNJaXdpUTI5dVpHbDBhVzl1SWpwN0lrUmhkR1ZNWlhOelZHaGhiaUk2ZXlKQlYxTTZSWEJ2WTJoVWFXMWxJam94TlRZek16a3dOakF5ZlgxOVhYMF8mU2lnbmF0dXJlPUhXeHZJMlE5SGxnakVFN0NWbElaemdFRTdQVURkN3dRTG1sOFR1SUwtOEFkV0dBQVpFVWd6WEJyblpYZTNCMWYtQ2Q3RkV1bXBJNTAyYldEMG92Z1VxQnRGeGpqbnAlN0V6RjhkWjNPeG9YdjRmdXhCdzRIcS1tcVpBYlF3ZFpQQnNyM1FBWEt4dmZkbGFIR3NZdWpTNWRhM00yeXF3aVhDVHJOcWE4VTVQR0stWVI0dnpFQXZaZ0VaJTdFQUNGd3ZxaU54SUxpRENSU29IT05GTzFTUElkTkh0RUZXU0dBWlNYOCU3RXBsZ3RqZC1RRHZUb09Ed1dHVEp2am5oSVpCTkhtb2NSUDR5UEJZcSU3RUxoVElXczBVOVBNbjB4bmtQZTN0LUo0Z3VGdjFRYXYxJTdFNFY1aG9ZR0djNU5TWEdZYnljV2x2TEtEYmRiQXNxaVVkWG82NHQ2dnlYeWdfXyZLZXktUGFpci1JZD1BUEtBSUI1REdDR0FRSjRHR0lVUSIsImJhY2tncm91bmRWaWRlbyI6ZmFsc2UsImZiU2lnIjp7InNpZyI6IlJnVXN2emRzRjhjMHErdVJRdFA4VVA3aEt6Yz0iLCJleHBpcmVzIjoxNTYzNDAxMzcyfSwiZXhwaXJlcyI6MTU2MzQxMjE3MjA0NSwiZG93bmxvYWRzIjp7InNkIjpmYWxzZSwiaGQiOmZhbHNlLCJ1aGQiOmZhbHNlLCJzb3VyY2UiOmZhbHNlfSwic2hhcmluZyI6ZmFsc2UsImVtYmVkX3NoYXJpbmciOmZhbHNlLCJyZWZyZXNoVG9rZW4iOiIxODliMTg5YS00ZDZhLTQ3NGYtOTI0MS0yZTM0NTkwYzlmOWQiLCJiYXNlIjoiaGxzMiIsImluTGlnaHRib3giOmZhbHNlLCJwb3N0ZXJQaWNrZXIiOmZhbHNlLCJwcmVsb2FkIjp0cnVlLCJtb2JpbGUiOmZhbHNlfQ==';</script>
+  
+
+  
+  
+  <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head><body style="cursor: default;">
+    <div class="player hd no-cc  no-dl no-share cover mobile-autoplay no-controls vol66 playing" style="background-size: contain; background-position: center center; background-repeat: no-repeat;" aria-label="Video Player" role="main">
+      
+      <div class="player-big-play-button" role="button" aria-label="Play Video" tabindex="1" style="display: none;">
+        <svg viewBox="0 0 26 30"><polygon points="0,0 0,30 26,15"></polygon></svg>
+      </div>
+
+      <div class="player-buffer" style="display: none;">
+        <div class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+      </div>
+
+      <div class="player-video-holder">
+        <video width="100%" height="100%" id="video-d49bdfb6191fe5c45c-html" crossorigin="anonymous" preload="metadata" loop="" style="" src="blob:https://videos.sproutvideo.com/ca01c5fe-f946-47d0-9c34-b7f384d9c736"></video>
+      </div>
+      
+      <div class="player-control-bar">
+        <div class="player-play-pause player-button" role="button" aria-label="Pause" tabindex="2" data-tabindex="2">
+          <svg id="play" viewBox="0 0 26 30">
+            <polygon points="0,0 0,30 26,15"></polygon>
+          </svg>
+          <svg id="pause" viewBox="0 0 12 20">
+            <path d="M1,20h2c0.6,0,1-0.4,1-1V1c0-0.6-0.4-1-1-1H1C0.4,0,0,0.4,0,1v18C0,19.6,0.4,20,1,20z"></path>
+            <path d="M11,0H9C8.4,0,8,0.4,8,1v18c0,0.6,0.4,1,1,1h2c0.6,0,1-0.4,1-1V1C12,0.4,11.6,0,11,0z"></path>
+          </svg>
+        </div>
+
+        <div class="player-volume player-button" role="button" aria-label="Mute" tabindex="3" data-tabindex="3">
+          <div class="volume-bar" role="slider" aria-label="Volume slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" aria-valuetext="100% volume" tabindex="4" data-tabindex="4">
+            <div class="volume-bar-background"></div>
+            <div class="volume-track-background"></div>
+            <div class="volume-track-controller" style="bottom: 72px;"></div>
+            <div class="volume-track-status" style="height: 84px;"></div>
+          </div>
+
+          <svg viewBox="0 0 17.3 13.6">
+             <path id="speaker" d="m7.89999,0.17501l-3.4,3.3l-3.4,0c-0.7,0 -1.1,0.6 -1.1,1.1l0,4.5c0,0.6 0.4,1.1 1.1,1.1l3.4,0l3.5,3.3c0,0 1,0.6 1,-1.2c0,-0.9 0,-4.9 0,-10.9c0,-1.9 -1.1,-1.2 -1.1,-1.2l0,0z"></path>
+             <path id="wave-one" d="m10.99999,3.57501c-0.2,0 -0.4,0.2 -0.4,0.4l0,0.8c0,0.2 0.2,0.4 0.4,0.5c0.7,0.2 1.3,0.9 1.3,1.6c0,0.8 -0.5,1.4 -1.3,1.6c-0.2,0.1 -0.4,0.2 -0.4,0.5l0,0.9c0,0.2 0.2,0.4 0.4,0.4c1.7,-0.2 3,-1.6 3,-3.4s-1.3,-3.1 -3,-3.3z"></path>
+             <path id="wave-two" d="m10.59999,0.57501l0,0.8c0,0.2 0.2,0.4 0.4,0.4c2.6,0.2 4.6,2.4 4.6,5s-2,4.8 -4.6,5c-0.2,0 -0.4,0.2 -0.4,0.4l0,0.8c0,0.2 0.2,0.4 0.4,0.4c3.5,-0.2 6.3,-3.2 6.3,-6.7s-2.7,-6.3 -6.3,-6.5c-0.2,0 -0.4,0.2 -0.4,0.4z"></path>
+             <path id="mute" d="m15.69999,6.87501l1.4,-1.4c0.2,-0.2 0.2,-0.5 0,-0.7l-0.7,-0.7c-0.2,-0.2 -0.5,-0.2 -0.7,0l-1.4,1.4l-1.3,-1.3c-0.2,-0.2 -0.5,-0.2 -0.7,0l-0.7,0.7c-0.2,0.2 -0.2,0.5 0,0.7l1.4,1.3l-1.4,1.4c-0.2,0.2 -0.2,0.5 0,0.7l0.7,0.7c0.2,0.2 0.5,0.2 0.7,0l1.4,-1.4l1.4,1.4c0.2,0.2 0.5,0.2 0.7,0l0.5,-0.8c0.2,-0.2 0.2,-0.5 0,-0.7l-1.3,-1.3z"></path>
+          </svg>
+        </div>
+
+        <div class="player-progress-time">00:04</div>
+        <div class="player-tracks" role="slider" aria-label="Seek Slider" aria-valuemin="0" aria-valuemax="65.566411" aria-valuenow="4.172948" aria-valuetext="00:04 of 01:05" tabindex="4" data-tabindex="4">
+          <div class="player-track-background"></div>
+          <div class="player-track-loaded"></div>
+          <div class="player-track-controller" style="left: 6.36446%;"></div>
+          <div class="player-track-progress" style="width: 6.36446%;"></div>
+          <div class="player-track-time" style="width: 141.355px; height: 65px;">
+            <div class="player-track-time-background" style="background-size: 1390.57px; width: 139.355px; height: 63px;"></div>
+            <div class="player-track-time-gradient"></div>
+            <div class="player-track-time-time">00:00</div>
+          </div>
+        </div>
+        <div class="player-total-time">01:05</div>
+        <div class="player-share-btn player-button" role="button" aria-label="Sharing" aria-haspopup="true" aria-owns="player-share-sheet" aria-pressed="false" tabindex="4" data-tabindex="4">
+          <svg viewBox="0 0 478.165 478.165"><path d="M168.752,239.082c0,1.654-0.418,3.088-0.458,4.722l171.223,85.771 c14.803-12.512,33.551-20.342,54.172-20.342c46.681,0,84.436,37.815,84.436,84.456c0.04,46.661-37.735,84.476-84.396,84.476 c-46.681,0-84.237-37.815-84.237-84.476c0-1.534,0.219-3.208,0.458-4.742l-171.342-85.532 c-14.704,12.253-33.511,20.123-54.172,20.123C37.815,323.498,0,285.743,0,239.082s37.815-84.476,84.336-84.476 c20.76,0,39.449,7.87,54.152,20.242L309.93,89.198c-0.259-1.654-0.697-3.228-0.697-4.861C309.492,37.795,347.048,0,393.729,0 c46.661,0,84.436,37.795,84.436,84.316c0,46.641-37.775,84.476-84.436,84.476c-20.681,0-39.369-7.89-54.152-20.282l-171.243,85.691 C168.354,235.835,168.752,237.409,168.752,239.082z"></path></svg>
+        </div>
+        <div class="player-download-btn player-button" role="button" aria-label="Download" aria-haspopup="true" aria-owns="player-download-sheet" aria-pressed="false" tabindex="13" data-tabindex="13">
+          <svg viewBox="0 0 26 26">
+            <path d="m25,17h-2c-0.6,0-1,0.4-1,1v2.5c0,0.3-0.2,0.5-0.5,0.5h-17c-0.3,0-0.5-0.2-0.5-0.5v-2.5c0-0.6-0.4-1-1-1h-2c-0.6,0-1,0.4-1,1v6c0,0.6 0.4,1 1,1h24c0.6,0 1-0.4 1-1v-6c0-0.6-0.4-1-1-1z"></path>
+            <path d="m12.3,16.7c0.2,0.2 0.5,0.3 0.7,0.3s0.5-0.1 0.7-0.3l6-6c0.2-0.2 0.3-0.4 0.3-0.7s-0.1-0.5-0.3-0.7l-1.4-1.4c-0.2-0.2-0.4-0.3-0.7-0.3-0.3,0-0.5,0.1-0.7,0.3l-1,1c-0.3,0.3-0.9,0.1-0.9-0.4v-6.5c0-0.6-0.4-1-1-1h-2c-0.6,0-1,0.4-1,1v6.6c0,0.4-0.5,0.7-0.9,0.4l-1-1c-0.2-0.2-0.4-0.3-0.7-0.3-0.3,0-0.5,0.1-0.7,0.3l-1.4,1.4c-0.2,0.2-0.3,0.4-0.3,0.7s0.1,0.5 0.3,0.7l6,5.9z"></path>
+          </svg>
+        </div>
+        <div class="player-cc player-button" role="button" aria-label="Subtitles/closed captions" aria-expanded="false" tabindex="19" data-tabindex="19">
+          <svg viewBox="0 0 24 17">
+            <path d="M21,0H3C1.3,0,0,1.3,0,3v11c0,1.7,1.3,3,3,3h18c1.7,0,3-1.3,3-3V3C24,1.3,22.7,0,21,0z M10.2,11.9c-0.5,0.2-1,0.3-1.6,0.3
+              c-0.6,0-1.2-0.1-1.7-0.3s-1-0.5-1.3-0.8C5.3,10.7,5,10.3,4.8,9.8C4.6,9.3,4.5,8.7,4.5,8.1c0-0.6,0.1-1.2,0.3-1.7
+              C5,5.9,5.3,5.5,5.6,5.1C6,4.8,6.5,4.5,7,4.3C7.5,4.1,8,4,8.7,4c0.2,0,0.4,0,0.7,0.1c0.2,0,0.5,0.1,0.7,0.2c0.2,0.1,0.5,0.2,0.7,0.4
+              c0.2,0.1,0.4,0.3,0.6,0.5L10,6.2C9.8,6,9.6,5.9,9.3,5.8C9.1,5.7,8.8,5.6,8.5,5.6c-0.3,0-0.6,0.1-0.9,0.2C7.3,5.9,7.1,6.1,6.9,6.3
+              C6.7,6.5,6.5,6.8,6.4,7.1c-0.1,0.3-0.2,0.6-0.2,1c0,0.4,0.1,0.7,0.2,1c0.1,0.3,0.3,0.6,0.5,0.8s0.4,0.4,0.7,0.5
+              c0.3,0.1,0.6,0.2,0.9,0.2c0.4,0,0.7-0.1,0.9-0.2c0.3-0.1,0.5-0.4,0.7-0.6l1.4,1.1C11.1,11.3,10.7,11.7,10.2,11.9z M18.9,11.9
+              c-0.5,0.2-1,0.3-1.6,0.3c-0.6,0-1.2-0.1-1.7-0.3c-0.5-0.2-1-0.5-1.3-0.8c-0.4-0.4-0.7-0.8-0.9-1.3c-0.2-0.5-0.3-1.1-0.3-1.7
+              c0-0.6,0.1-1.2,0.3-1.7c0.2-0.5,0.5-0.9,0.9-1.3c0.4-0.4,0.8-0.6,1.3-0.8C16.1,4.1,16.7,4,17.3,4c0.2,0,0.4,0,0.7,0.1
+              c0.2,0,0.5,0.1,0.7,0.2c0.2,0.1,0.5,0.2,0.7,0.4c0.2,0.1,0.4,0.3,0.6,0.5l-1.3,1.1C18.4,6,18.2,5.9,18,5.8
+              c-0.2-0.1-0.5-0.2-0.9-0.2c-0.3,0-0.6,0.1-0.9,0.2c-0.3,0.1-0.5,0.3-0.7,0.5c-0.2,0.2-0.4,0.5-0.5,0.8c-0.1,0.3-0.2,0.6-0.2,1
+              c0,0.4,0.1,0.7,0.2,1c0.1,0.3,0.3,0.6,0.5,0.8c0.2,0.2,0.4,0.4,0.7,0.5c0.3,0.1,0.6,0.2,0.9,0.2c0.4,0,0.7-0.1,0.9-0.2
+              c0.3-0.1,0.5-0.4,0.7-0.6l1.4,1.1C19.8,11.3,19.4,11.7,18.9,11.9z"></path>
+          </svg>
+        </div>
+        <div class="player-settings player-button" role="button" aria-expanded="false" aria-label="Settings" tabindex="21" data-tabindex="21">
+          <svg viewBox="0 0 15.998 15.998">
+            <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M13.998,7c-0.553,0-1.08-0.443-1.291-0.952 c-0.21-0.508-0.15-1.194,0.24-1.585l0.707-0.706c0.391-0.391,0.391-1.024,0.001-1.415c-0.391-0.391-1.024-0.391-1.415,0 c0,0-0.316,0.316-0.707,0.707S10.457,3.5,9.949,3.29C9.442,3.08,8.998,2.553,8.998,2V1c0-0.553-0.447-1-1-1s-1,0.447-1,1v1 c0,0.553-0.442,1.08-0.95,1.291s-1.192,0.15-1.583-0.24L3.756,2.344c-0.391-0.391-1.024-0.39-1.413,0 C1.952,2.734,1.952,3.367,2.342,3.758l0.709,0.708C3.441,4.856,3.51,5.545,3.338,6.062C3.168,6.58,2.648,7.016,2.097,7.01L1,7 C0.448,7,0,7.449,0,8c0,0.553,0.448,1,1,1h1.001c0.552,0,1.087,0.438,1.331,0.925c0.245,0.486,0.188,1.159-0.207,1.546l-0.783,0.77 c-0.391,0.391-0.39,1.025,0,1.414c0.391,0.391,1.024,0.391,1.414,0.001l0.708-0.708c0.391-0.391,1.075-0.451,1.584-0.24 c0.508,0.211,0.95,0.738,0.95,1.291v1.001c0,0.552,0.448,1,1,0.999c0.553,0,1-0.447,1-0.999v-1.001c0-0.553,0.444-1.08,0.951-1.289 c0.508-0.211,1.193-0.15,1.584,0.24l0.707,0.707c0.391,0.391,1.024,0.391,1.413,0c0.391-0.391,0.392-1.024,0.002-1.414l-0.708-0.708 c-0.391-0.391-0.451-1.076-0.24-1.584S13.445,9,13.998,9h1c0.553,0,1-0.447,1-1s-0.447-1-1-1H13.998z M7.998,10 c-1.103,0-2-0.897-2-2s0.897-2,2-2s2,0.897,2,2S9.101,10,7.998,10z"></path>
+          </svg>
+        </div>
+        <div class="player-fullscreen player-button" role="button" aria-label="Fullscreen" aria-pressed="false" tabindex="24" data-tabindex="24">
+          <svg viewBox="0 0 15 15">
+            <path d="M4.5,13H2v-2.5C2,10.2,1.8,10,1.5,10h-1C0.2,10,0,10.2,0,10.5V14c0,0.6,0.4,1,1,1h3.5C4.8,15,5,14.8,5,14.5v-1
+              C5,13.2,4.8,13,4.5,13z"></path>
+            <path d="M4.5,0H1C0.4,0,0,0.4,0,1v3.5C0,4.8,0.2,5,0.5,5h1C1.8,5,2,4.8,2,4.5V2h2.5C4.8,2,5,1.8,5,1.5v-1C5,0.2,4.8,0,4.5,0z"></path>
+            <path d="M14,0h-3.5C10.2,0,10,0.2,10,0.5v1C10,1.8,10.2,2,10.5,2H13v2.5C13,4.8,13.2,5,13.5,5h1C14.8,5,15,4.8,15,4.5V1
+              C15,0.4,14.6,0,14,0z"></path>
+            <path d="M14.5,10h-1c-0.3,0-0.5,0.2-0.5,0.5V13h-2.5c-0.3,0-0.5,0.2-0.5,0.5v1c0,0.3,0.2,0.5,0.5,0.5H14c0.6,0,1-0.4,1-1v-3.5
+              C15,10.2,14.8,10,14.5,10z"></path>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="player-subtitle-cue toolbar-visible"></div>
+      <div class="player-subtitle-menu player-menu" aria-hidden="true">
+        <div class="player-language player-option">
+          <label>Language</label>
+          <div class="player-setting">
+            <div class="player-select">
+              <select class="player-language-select" tabindex="20" aria-label="Subtitle Language">
+                <option selected="">None</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="player-settings-menu player-menu" aria-hidden="true" role="menu">
+        <div class="player-resolution player-option">
+          <label>Resolution</label>
+          <div class="player-setting">
+            <div class="player-select">
+              <select class="player-resolution-select" tabindex="22" aria-label="Video quality"><option value="868">1080p</option><option value="578">720p</option><option value="386">480p</option><option value="290">360p</option><option value="192">240p</option>
+                <option selected="">Auto</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="player-speed player-option">
+          <label>Speed</label>
+          <div class="player-setting">
+            <div class="player-select">
+              <select class="player-speed-select" tabindex="23" aria-label="Playback Speed">
+                <option value="0.25">0.25X</option>
+                <option value="0.5">0.5X</option>
+                <option value="0.75">0.75X</option>
+                <option value="1" selected="">1X</option>
+                <option value="1.25">1.25X</option>
+                <option value="1.5">1.5X</option>
+                <option value="2">2X</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="player-mobile-muted" role="button" aria-label="Un-mute">
+        <svg viewBox="0 0 17.3 13.6">
+           <path d="m7.89999,0.17501l-3.4,3.3l-3.4,0c-0.7,0 -1.1,0.6 -1.1,1.1l0,4.5c0,0.6 0.4,1.1 1.1,1.1l3.4,0l3.5,3.3c0,0 1,0.6 1,-1.2c0,-0.9 0,-4.9 0,-10.9c0,-1.9 -1.1,-1.2 -1.1,-1.2l0,0z"></path>
+           <path d="m15.69999,6.87501l1.4,-1.4c0.2,-0.2 0.2,-0.5 0,-0.7l-0.7,-0.7c-0.2,-0.2 -0.5,-0.2 -0.7,0l-1.4,1.4l-1.3,-1.3c-0.2,-0.2 -0.5,-0.2 -0.7,0l-0.7,0.7c-0.2,0.2 -0.2,0.5 0,0.7l1.4,1.3l-1.4,1.4c-0.2,0.2 -0.2,0.5 0,0.7l0.7,0.7c0.2,0.2 0.5,0.2 0.7,0l1.4,-1.4l1.4,1.4c0.2,0.2 0.5,0.2 0.7,0l0.5,-0.8c0.2,-0.2 0.2,-0.5 0,-0.7l-1.3,-1.3z"></path>
+        </svg>
+      </div>
+      <div class="player-stats" aria-hidden="true">
+        <div><div>Video ID:</div><span>d49bdfb6191fe5c45c</span></div>
+        <div><div>User ID:</div><span>029bdebc101fe3c38c</span></div>
+        <div><div>Playback:</div><span class="stat-playback"></span></div>
+        <div><div>Dimensions:</div><span class="stat-dimensions"></span></div>
+        <div><div>Resolution:</div><span class="stat-resolution"></span></div>
+        <div><div>Level Cap:</div><span class="stat-levelcap"></span></div>
+        <div><div>Speed:</div><span><span class="sparkline"></span><span class="stat-speed"></span></span></div>
+      </div>
+      <div class="player-share-sheet player-sheet" aria-hidden="true" role="dialog" aria-live="assertive">
+        <div class="player-card player-social-card">
+          <div class="player-card-btn player-card-close" role="button" aria-label="Close overlay" data-tabindex="12" tabindex="-1">
+            <svg viewBox="0 0 8.071 8.07">
+              <path d="M7.924,6.51L5.45,4.035l2.475-2.475c0.196-0.195,0.196-0.512,0-0.707L7.217,0.146 c-0.195-0.195-0.512-0.195-0.707,0L4.036,2.621L1.561,0.146c-0.195-0.195-0.512-0.195-0.707,0L0.147,0.854 c-0.196,0.195-0.196,0.512,0,0.707l2.475,2.475L0.147,6.51c-0.196,0.195-0.196,0.512,0,0.707l0.707,0.707 c0.195,0.195,0.512,0.195,0.707,0l2.475-2.475L6.51,7.924c0.195,0.195,0.512,0.195,0.707,0l0.707-0.707 C8.121,7.021,8.121,6.705,7.924,6.51z"></path>
+            </svg>
+          </div>
+          <div class="player-share-options">
+            <h2>Share this video</h2>
+            <div class="social-sharing">
+              <ul>
+                <li class="facebook" role="button" aria-label="Share on Facebook" data-tabindex="5" tabindex="-1">
+                  <svg viewBox="0 0 16 16">
+                    <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8S12.418,0,8,0z M11,5h-1 C9.15,5,9,5,9,7h2v2H9v4H7V9H5V7h2c0-1.531,0-4,3-4h1V5z"></path>
+                  </svg>
+                </li>
+                <li class="twitter" role="button" aria-label="Share on Twitter" data-tabindex="6" tabindex="-1">
+                  <svg viewBox="0 0 16 16">
+                    <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8c4.418,0,8-3.582,8-8 S12.418,0,8,0z M11.993,5.992c0.004,0.086,0.008,0.174,0.008,0.262c0,2.669-2.03,5.746-5.745,5.746c-1.14,0-2.198-0.336-3.092-0.907 c0.158,0.019,0.326,0.028,0.489,0.028c0.946,0,1.831-0.324,2.522-0.865c-0.884-0.016-1.602-0.6-1.858-1.402 C4.44,8.877,4.622,8.891,4.752,8.891c0.184,0,0.474-0.025,0.644-0.071C4.473,8.633,4,7.817,4,6.84c0-0.009,0-0.018,0-0.027 c0,0.152,0.36,0.243,0.691,0.254c-0.542-0.363-1.122-0.98-1.122-1.682c0-0.369,0.1-0.717,0.273-1.015 c0.996,1.222,2.484,2.026,4.163,2.11C7.97,6.332,7.953,6.178,7.953,6.02C7.953,4.904,8.856,4,9.972,4 c0.581,0,1.105,0.245,1.475,0.639c0.459-0.091,0.892-0.259,1.282-0.49c-0.151,0.472-0.472,0.867-0.888,1.117 c0.408-0.05,0.797-0.158,1.159-0.318C12.729,5.352,12.389,5.707,11.993,5.992z"></path>
+                  </svg>
+                </li>
+                <li class="pinterest" role="button" aria-label="Share on Pinterest" data-tabindex="7" tabindex="-1">
+                  <svg viewBox="0 0 16 16">
+                    <path d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8S12.418,0,8,0z M8.668,10.252c-0.626-0.046-0.889-0.349-1.379-0.639 C7.018,10.99,6.688,12.311,5.711,13C5.41,10.919,6.154,9.356,6.5,7.697C5.91,6.732,6.571,4.791,7.814,5.27 C9.344,5.858,6.49,8.855,8.405,9.23c2.001,0.391,2.817-3.375,1.577-4.6C8.189,2.863,4.765,4.59,5.186,7.122 c0.104,0.62,0.761,0.808,0.264,1.661c-1.146-0.247-1.49-1.127-1.445-2.3c0.07-1.919,1.773-3.264,3.481-3.45 c2.161-0.234,4.188,0.771,4.468,2.748C12.268,8.012,10.979,10.427,8.668,10.252z"></path>
+                  </svg>
+                </li>
+                <li class="linkedin" role="button" aria-label="Share on LinkedIn" data-tabindex="9" tabindex="-1">
+                  <svg viewBox="0 0 486.392 486.392">
+                    <path d="M243.196,0C108.891,0,0,108.891,0,243.196s108.891,243.196,243.196,243.196 s243.196-108.891,243.196-243.196C486.392,108.861,377.501,0,243.196,0z M182.397,360.994h-60.799V148.197h60.799V360.994z M153.882,135.156c-15.747,0-28.484-12.768-28.484-28.515s12.768-28.515,28.484-28.515c15.747,0.03,28.515,12.798,28.515,28.515 C182.397,122.388,169.629,135.156,153.882,135.156z M395.193,360.994h-60.799V229.425c0-15.413-4.408-26.204-23.347-26.204 c-31.403,0-37.452,26.204-37.452,26.204v131.569h-60.799V148.197h60.799v20.337c8.694-6.657,30.399-20.307,60.799-20.307 c19.699,0,60.799,11.795,60.799,83.051V360.994z"></path>
+                  </svg>
+                </li>
+                <li class="email" role="button" aria-label="Share via  Email" data-tabindex="10" tabindex="-1">
+                  <svg viewBox="-304 382 30 30">
+                    <path d="M-289,382c-8.3,0-15,6.7-15,15c0,8.3,6.7,15,15,15s15-6.7,15-15C-274,388.7-280.7,382-289,382z M-297,394.7 c0-0.3,0.2-0.4,0.4-0.2l2.5,2c0.2,0.2,0.2,0.5,0,0.6l-2.5,2c-0.2,0.2-0.4,0.1-0.4-0.2V394.7z M-281,402c0,0.4-0.5,1-1,1h-14 c-0.5,0-1-0.6-1-1v-0.3l4.3-3.4c0.2-0.2,0.6-0.2,0.8,0l2.5,2c0.2,0.2,0.6,0.2,0.8,0l2.5-2c0.2-0.2,0.6-0.2,0.8,0l4.3,3.4V402z M-281,399c0,0.3-0.2,0.4-0.4,0.2l-2.5-2c-0.2-0.2-0.2-0.5,0-0.6l2.5-2c0.2-0.2,0.4-0.1,0.4,0.2V399z M-288.6,398 c-0.2,0.2-0.6,0.2-0.8,0l-7.6-6c0-0.4,0.5-1,1-1h14c0.5,0,1,0.6,1,1L-288.6,398z"></path>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+            <div class="embed-code-sharing">
+              <h3>Embed Code</h3>
+              <input class="player-embed-code" spellcheck="false" aria-readonly="true" readonly="" aria-label="Embed code" data-tabindex="11" tabindex="-1">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="player-download-sheet player-sheet" aria-hidden="true" role="dialog" aria-live="assertive">
+        <div class="player-card-btn player-card-close" role="button" aria-label="Close overlay" data-tabindex="18" tabindex="-1">
+          <svg viewBox="0 0 8.071 8.07">
+            <path d="M7.924,6.51L5.45,4.035l2.475-2.475c0.196-0.195,0.196-0.512,0-0.707L7.217,0.146 c-0.195-0.195-0.512-0.195-0.707,0L4.036,2.621L1.561,0.146c-0.195-0.195-0.512-0.195-0.707,0L0.147,0.854 c-0.196,0.195-0.196,0.512,0,0.707l2.475,2.475L0.147,6.51c-0.196,0.195-0.196,0.512,0,0.707l0.707,0.707 c0.195,0.195,0.512,0.195,0.707,0l2.475-2.475L6.51,7.924c0.195,0.195,0.512,0.195,0.707,0l0.707-0.707 C8.121,7.021,8.121,6.705,7.924,6.51z"></path>
+          </svg>
+        </div>
+        <div class="player-download-options">
+          <h2>Download Video</h2>
+          <ul>
+            <li><a class="sd-download" href="https://videos.sproutvideo.com/embed/d49bdfb6191fe5c45c/false" target="_blank" arial-label="Download SD video" data-tabindex="14" tabindex="-1">SD</a></li>
+            <li><a class="hd-download" href="https://videos.sproutvideo.com/embed/d49bdfb6191fe5c45c/false" target="_blank" aria-label="Download HD video" data-tabindex="15" tabindex="-1">HD</a></li>
+            <li><a class="uhd-download" href="https://videos.sproutvideo.com/embed/d49bdfb6191fe5c45c/false" target="_blank" aria-label="Download UHD video" data-tabindex="16" tabindex="-1">UHD</a></li>
+            <li><a class="source-download" href="https://videos.sproutvideo.com/embed/d49bdfb6191fe5c45c/false" target="_blank" arial-label="Download source video" data-tabindex="17" tabindex="-1">Source</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <script src="./jquery.min.js.download" defer=""></script>
+    <!--[if lte IE 7]>
+    <script type="text/javascript" src="//d1ajyp3swh7ygp.cloudfront.net/json2.js"></script>
+    <![endif]-->
+    <script type="text/javascript">if(typeof Set != 'function'){document.write('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js" async defer></'+'script>');}</script>
+    <script type="text/javascript" src="./es6.min-740a63e4.js.download" defer=""></script>
+  
+
+</body></html>
